@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="privateHouse" class="com.Practice1.app.PrivateHouse">
+<constructor-arg value="7"/>
+</bean>
+
+<bean id = "green" class="com.Practice1.app.Green"/>
+
+<bean id = "greenHouse" class="com.Practice1.app.PaintedHouse">
+	<constructor-arg value="7"/>
+	<constructor-arg ref="green"/>
+</bean>
+
+<bean id="rainbowCottageCity" class="com.Practice1.app.CottageCity">
+<property name="liveInPaintedHouse" value="green"/>
+</bean>
+
+<bean id = "cottageCityrnHouses" class="com.Practice1.app.CottageCityTenHouses"/>
+
+
+</beans>
